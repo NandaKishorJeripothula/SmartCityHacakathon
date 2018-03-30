@@ -1,0 +1,102 @@
+---
+title: "Ramification subdue-Impede radiation"
+author: "Team work"
+date: "March 12, 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r}
+#reading the data into R (data preprocessing)
+project <- read.csv(paste("sample.csv" , sep = ""))
+View(project)
+```
+
+```{r}
+library(psych)
+describe(project)
+```
+
+```{r}
+str(project)
+```
+
+```{r}
+#boxplots as per analysis.
+boxplot(project$range.frequency.MHz.  , horizontal =TRUE,main="Range frequency strength in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$electric.field.strength , horizontal =TRUE,main="Range of electric field strength in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$magnetic.field.strength , horizontal =TRUE,main="Magnetic field Range in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$power.density.W.M. , horizontal =TRUE,main="power density Range in Karimnagar",col = "lightblue" )
+```
+
+
+```{r}
+hist(project$range.frequency.MHz. , main= "frequency ranges" ,xlab="range values" ,col = "peachpuff")
+```
+
+```{r}
+hist(project$electric.field.strength , main= "electric field strengths" ,xlab="range values" ,col = "blue")
+```
+
+
+```{r}
+hist(project$magnetic.field.strength, main= "magnetic field strength" ,xlab="range values" ,col = "skyblue")
+```
+
+```{r}
+hist(project$power.density.W.M. , main= "power densities" ,xlab="range values" ,col = "orange")
+```
+
+```{r}
+cor.test(project$range.frequency.MHz. , project$electric.field.strength)
+```
+
+```{r}
+cor.test(project$magnetic.field.strength , project$power.density.W.M.)
+```
+
+#t-tests
+
+```{r}
+t.test(project$range.frequency.MHz.)
+```
+
+```{r}
+t.test(project$electric.field.strength)
+```
+
+```{r}
+t.test(project$magnetic.field.strength)
+```
+
+```{r}
+t.test(project$power.density.W.M.)
+```
+
+```{r}
+
+```
+
+```{r}
+cor.test(project$electric.field.strength, project$electric.field.strength)
+```
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,39 @@
+---
+title: "Ramification subdue-Impede radiation"
+author: "Team work"
+date: "March 12, 2018"
+output: html_document
+---
+
+```{r}
+#reading the data into R (data preprocessing)
+project <- read.csv(paste("sample.csv" , sep = ""))
+View(project)
+```
+
+```{r}
+library(psych)
+describe(project)
+```
+
+```{r}
+str(project)
+```
+
+```{r}
+#boxplots as per analysis.
+boxplot(project$range.frequency.MHz.  , horizontal =TRUE,main="Range of the electric feild strength in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$electric.field.strength , horizontal =TRUE,main="Range of electric field strength in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$magnetic.field.strength , horizontal =TRUE,main="Magnetic field Range in Karimnagar",col = "lightblue" )
+```
+
+```{r}
+boxplot(project$power.density.W.M. , horizontal =TRUE,main="power density Range in Karimnagar",col = "lightblue" )
+```
+
